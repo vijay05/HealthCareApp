@@ -1,5 +1,6 @@
 package com.health.care.entity;
 
+//ctrl+shift+O
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,9 +14,10 @@ import lombok.Data;
 @Entity
 @Table(name="spec_tab")
 public class Specialization {
-
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //For MySQL
+	//@GeneratedValue(strategy = GenerationType.SEQUENCE) //For Oracle
 	@Column(name="spec_id_col")
 	private Long specId;
 	
@@ -27,5 +29,4 @@ public class Specialization {
 	
 	@Column(name="spec_note_col")
 	private String specNote;
-	
 }
